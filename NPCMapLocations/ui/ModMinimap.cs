@@ -347,11 +347,6 @@ namespace NPCMapLocations
         }
       }      
 
-      if (drawIsland)
-      {
-        b.Draw(ModMain.Map, new Vector2(NormalizeToMap(offsetMmLoc.X + 1020), NormalizeToMap(offsetMmLoc.Y + 560)), new Rectangle(208, 363, 45, 40), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 0.861f);
-      }
-
       //
       // ===== Farm buildings =====
       //

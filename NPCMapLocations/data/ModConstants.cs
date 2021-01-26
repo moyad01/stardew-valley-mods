@@ -87,43 +87,32 @@ public static class ModConstants
 		  {
           "Backwoods", new MapVector[]
           {
-              new MapVector(385, 122, 0, 0),
-              new MapVector(529, 238, 50, 40),
+              new MapVector(376, 129, 0, 0),
+              new MapVector(520, 248, 50, 40),
           }
       },
       {
           "Farm", new MapVector[]
           {
-              new MapVector(330, 237, 0, 0),
-              new MapVector(514, 386, 80, 65)
+              new MapVector(328, 236, 0, 0),
+              new MapVector(517, 389, 80, 65)
           }
       },
       {
           "BusStop", new MapVector[]
           {
-              new MapVector(517, 182, 0, 0),
-              new MapVector(594, 300, 35, 30)
+              new MapVector(512, 188, 0, 0),
+              new MapVector(618, 340, 35, 30)
           }
       },
       {
           "Forest", new MapVector[]
           {
-              new MapVector(250, 383, 0, 0),
-              new MapVector(554, 687, 120, 120)
-          }
-      },
-      {
-          "Woods", new MapVector[]
-          {
-              new MapVector(136, 346, 0, 0),
-              new MapVector(230, 395, 60, 32)
-          }
-      },
-      {
-          "DeepWoods", new MapVector[]
-          {
-            new MapVector(136, 346, 0, 0),
-            new MapVector(230, 395, 60, 32)
+              // Top half of forest
+              new MapVector(192, 384, 0, 0),
+              new MapVector(504, 656, 60, 32)
+
+            // Bottom half of forest
           }
       },
       {
@@ -131,37 +120,25 @@ public static class ModConstants
           {
 				      // Top half of town
 				      new MapVector(593, 173, 0, 0),
-              new MapVector(940, 275, 120, 40),
+              new MapVector(840, 275, 120, 40),
 
 				      // Bottom half of town
 				      new MapVector(602, 268, 0, 41),
-              new MapVector(958, 513, 120, 110),
-          }
-      },
-      {
-          "TownSquare", new MapVector[]
-          {
-              new MapVector(686, 366)
-          }
-      },
-      {
-          "Graveyard", new MapVector[]
-          {
-              new MapVector(738, 438)
+              new MapVector(968, 498, 120, 110)
           }
       },
       {
           "Beach", new MapVector[]
           {
-              new MapVector(726, 541, 0, 0),
-              new MapVector(997, 688, 104, 50)
+              new MapVector(752, 532, 0, 0),
+              new MapVector(980, 677, 104, 50)
           }
       },
       {
         "BeachNightMarket", new MapVector[]
         {
-          new MapVector(726, 541, 0, 0),
-          new MapVector(997, 688, 104, 50)
+              new MapVector(752, 532, 0, 0),
+              new MapVector(980, 677, 104, 50)
         }
       },
       {
