@@ -92,12 +92,6 @@ public static class ModConstants
           }
       },
       {
-          "Backwoods_Region", new MapVector[]
-          {
-              new MapVector(460, 190)
-          }
-      },
-      {
           "Farm", new MapVector[]
           {
               new MapVector(330, 237, 0, 0),
@@ -105,28 +99,10 @@ public static class ModConstants
           }
       },
       {
-          "Farm_Region", new MapVector[]
-          {
-              new MapVector(423, 321)
-          }
-      },
-      {
           "BusStop", new MapVector[]
           {
               new MapVector(517, 182, 0, 0),
               new MapVector(594, 300, 35, 30)
-          }
-      },
-      {
-          "BusStop_Region", new MapVector[]
-          {
-              new MapVector(555, 229)
-          }
-      },
-      {
-          "Merchant", new MapVector[]
-          {
-              new MapVector(320, 410),
           }
       },
       {
@@ -148,12 +124,6 @@ public static class ModConstants
           {
             new MapVector(136, 346, 0, 0),
             new MapVector(230, 395, 60, 32)
-          }
-      },
-      {
-          "RuinedHouse", new MapVector[]
-          {
-              new MapVector(333, 622)
           }
       },
       {
@@ -195,22 +165,10 @@ public static class ModConstants
         }
       },
       {
-          "LonelyStone", new MapVector[]
-          {
-              new MapVector(714, 636)
-          }
-      },
-      {
           "Railroad", new MapVector[]
           {
               new MapVector(589, 0, 0, 34),
               new MapVector(794, 81, 70, 62)
-          }
-      },
-      {
-          "Railroad_Region", new MapVector[]
-          {
-              new MapVector(730, 47),
           }
       },
       {
@@ -238,25 +196,7 @@ public static class ModConstants
               new MapVector(64, 2, 0, 0),
               new MapVector(216, 166, 50, 60),
           }
-      },
-      {
-          "Desert_Region", new MapVector[]
-          {
-              new MapVector(130, 96),
-          }
-      },
-      {
-          "MovieTheater", new MapVector[]
-          {
-              new MapVector(885, 302),
-          }
-      },
-      {
-          "WizardHouseBasement", new MapVector[]
-          {
-              new MapVector(263, 447),
-          }
-      },
+      }
     };
 
   // Custom farm markers

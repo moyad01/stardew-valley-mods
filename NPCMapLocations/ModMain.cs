@@ -14,7 +14,7 @@ using StardewValley.Characters;
 
 namespace NPCMapLocations
 {
-  public class ModMain : Mod, IAssetLoader
+  public class ModMain : Mod
   {
     public static PlayerConfig Config;
     public static GlobalConfig Globals;
@@ -44,40 +44,40 @@ namespace NPCMapLocations
     private static List<string> alertFlags;
 
     // Replace game map with modified mapinit
-    public bool CanLoad<T>(IAssetInfo asset)
-    {
-      return asset.AssetNameEquals(@"LooseSprites\Map") && Customizations != null;
-    }
+    //public bool CanLoad<T>(IAssetInfo asset)
+    //{
+    //  return asset.AssetNameEquals(@"LooseSprites\Map") && Customizations != null;
+    //}
 
-    public T Load<T>(IAssetInfo asset)
-    {
-      T map;
+    //public T Load<T>(IAssetInfo asset)
+    //{
+    //  T map;
 
-      if (MapSeason == null)
-      {
-        Monitor.Log("Unable to get current season. Defaulted to spring.", LogLevel.Debug);
-        MapSeason = "spring";
-      }
+    //  if (MapSeason == null)
+    //  {
+    //    Monitor.Log("Unable to get current season. Defaulted to spring.", LogLevel.Debug);
+    //    MapSeason = "spring";
+    //  }
 
-      if (!File.Exists(Path.Combine(ModMain.Helper.DirectoryPath, Customizations.MapsPath, $"{this.MapSeason}_map.png")))
-      {
-        Monitor.Log("Seasonal maps not provided. Defaulted to spring.", LogLevel.Debug);
-        MapSeason = null; // Set to null so that cache is not invalidate when game season changes
-      }
+    //  if (!File.Exists(Path.Combine(ModMain.Helper.DirectoryPath, Customizations.MapsPath, $"{this.MapSeason}_map.png")))
+    //  {
+    //    Monitor.Log("Seasonal maps not provided. Defaulted to spring.", LogLevel.Debug);
+    //    MapSeason = null; // Set to null so that cache is not invalidate when game season changes
+    //  }
 
-      // Replace map page
-      string filename = this.MapSeason == null ? "spring_map.png" : $"{this.MapSeason}_map.png";
+    //  // Replace map page
+    //  string filename = this.MapSeason == null ? "spring_map.png" : $"{this.MapSeason}_map.png";
 
-      bool useRecolor = Customizations.MapsPath != null && File.Exists(Path.Combine(ModMain.Helper.DirectoryPath, Customizations.MapsPath, filename));
-      map = useRecolor
-        ? Helper.Content.Load<T>(Path.Combine(Customizations.MapsPath, filename))
-        : Helper.Content.Load<T>(Path.Combine(Customizations.MapsRootPath, "_default", filename));
+    //  bool useRecolor = Customizations.MapsPath != null && File.Exists(Path.Combine(ModMain.Helper.DirectoryPath, Customizations.MapsPath, filename));
+    //  map = useRecolor
+    //    ? Helper.Content.Load<T>(Path.Combine(Customizations.MapsPath, filename))
+    //    : Helper.Content.Load<T>(Path.Combine(Customizations.MapsRootPath, "_default", filename));
 
-      if (useRecolor)
-        Monitor.Log($"Using recolored map {Path.Combine(Customizations.MapsPath, filename)}.", LogLevel.Debug);
+    //  if (useRecolor)
+    //    Monitor.Log($"Using recolored map {Path.Combine(Customizations.MapsPath, filename)}.", LogLevel.Debug);
 
-      return map;
-    }
+    //  return map;
+    //}
 
     public override void Entry(IModHelper helper)
     {
@@ -269,11 +269,6 @@ namespace NPCMapLocations
         greehouseLoc.Y -= 7 / 2 * 3;
         FarmBuildings["Greenhouse"] = new KeyValuePair<string, Vector2>("Greenhouse", greehouseLoc);
       }
-
-      // Add FarmHouse
-      var farmhouseLoc = LocationToMap("FarmHouse", -1, -1, Customizations.MapVectors);
-      farmhouseLoc.X -= 6;
-      FarmBuildings["FarmHouse"] = new KeyValuePair<string, Vector2>("FarmHouse", farmhouseLoc);
     }
 
     private void World_BuildingListChanged(object sender, BuildingListChangedEventArgs e)
